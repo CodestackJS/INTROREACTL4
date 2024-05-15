@@ -1,14 +1,14 @@
-Name: Jerie See 
-Project: Mini Challenge 5 Alert Component
-Date: 05/14/2024
+Name: Jerie See  <br>
+Project: Mini Challenge 5 Alert Component  <br>
+Date: 05/14/2024  <br>
 
-Requirements: Mini Challenge: Alert Component
+Requirements: Mini Challenge: Alert Component  <br>
 
 In our Same Project file: Create a re-usable Alert Component
 
 Use bootstrap
 
-Create a simple React component called Alert that is tied to a button and with the button toggle the alert to show and hide.
+Create a simple React component called Alert that is tied to a button and with the button toggle the alert to show and hide.  <br>
 
 Requirements:
 
