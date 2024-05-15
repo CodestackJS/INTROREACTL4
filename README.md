@@ -19,6 +19,6 @@ Use state to display the alert. Remember passing props Remember Ternary operator
 Resources:
 GitHub: https://github.com/CodestackJS/INTROREACTL4
 
-Peer Reviewed by: David Jimenez
+Peer Reviewed by: David Jimenez <br>
 Comments:
 Put your comments here
