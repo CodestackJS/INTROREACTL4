@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup/ListGroup";
@@ -36,17 +36,20 @@ const App = () => {
   };
 
 
-const [turnOn, setTurnOn] = useState(true)
+  
+const [turnOn, setTurnOn] = useState(false)
+
+const [turnOff, setTurnOff] = useState(true)
 
   // return <div>Message</div>
   return (
     <>
       <div>
         {/* <Alert text="This text is coming from my text prop Alert"/> */}
-
+        {/* this is the css for the icon */}
         <BsCalendar2DateFill color="red" size={180} />
 
-       {turnOn?<Alert closingAlertButton = {() => setTurnOn(false)}> Passing in text as a child Alert!.</Alert>:null }
+    {turnOff ? null : <Alert closingAlertButton = {() => setTurnOff(true)}> Test Alert Trial Button!</Alert> }
         
         
         {turnOn?<Alert closingAlertButton = {() => setTurnOn(false)} >For the Alert Challenge Button...</Alert>:null }
@@ -58,7 +61,7 @@ const [turnOn, setTurnOn] = useState(true)
         </Button>
 
         {/* Trial Alert Button Test */}
-        <Button color="info" onClickFunction={() => setTurnOn(true)}>
+        <Button color="info" onClickFunction={() => setTurnOff(false)}>
           Trial Button
         </Button>
 
