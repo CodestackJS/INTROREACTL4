@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup/ListGroup";
@@ -34,6 +35,9 @@ const App = () => {
     console.log("Clicked from our helper function ");
   };
 
+
+const [turnOn, setTurnOn] = useState(true)
+
   // return <div>Message</div>
   return (
     <>
@@ -41,18 +45,25 @@ const App = () => {
         {/* <Alert text="This text is coming from my text prop Alert"/> */}
 
         <BsCalendar2DateFill color="red" size={180} />
-        <Alert>Passing in text as a child Alert!</Alert>
-        <Alert>For the Alert Challenge Button...</Alert>
+
+       {turnOn?<Alert closingAlertButton = {() => setTurnOn(false)}> Passing in text as a child Alert!.</Alert>:null }
+        
+        
+        {turnOn?<Alert closingAlertButton = {() => setTurnOn(false)} >For the Alert Challenge Button...</Alert>:null }
+
 
         <Button onClickFunction={handleClick}>One Button</Button>
         <Button color="danger" onClickFunction={handleClick}>
           Two Button
         </Button>
-        <Button color="success" onClickFunction={handleClick}>
-          Three Button
+
+        {/* Trial Alert Button Test */}
+        <Button color="info" onClickFunction={() => setTurnOn(true)}>
+          Trial Button
         </Button>
 
-        <Button color="success" onClickFunction={handleClick}>
+        {/* Alert Button  */}
+        <Button color="success" onClickFunction={() =>setTurnOn(true)}>
           Alert Button
         </Button>
 
