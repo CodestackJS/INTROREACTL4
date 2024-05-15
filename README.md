@@ -21,4 +21,4 @@ GitHub: https://github.com/CodestackJS/INTROREACTL4
 
 Peer Reviewed by: David Jimenez <br>
 Comments:
-Put your comments here
+I see that your Alert component works. In the App.tsx, I also see that you use the ternary operator to display and not display the alert using your useStates.  I find it interesting that you used two useStates instead of one and simply change it from true to false or false to true.  I didnt  think of it this way but I like how it works.  I see that you are calling your button and alert components properly as well.
