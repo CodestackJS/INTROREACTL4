@@ -17,8 +17,8 @@ The component should display the Alert message of your choice. There should be a
 Use state to display the alert. Remember passing props Remember Ternary operator. Remember which type turns something on and off. Look at the bootstrap Alert docs
 
 Resources:
-GitHub: https://github.com/dljimenez2324/IntroReact
+GitHub: https://github.com/CodestackJS/INTROREACTL4
 
-Peer Reviewed by: Name here
+Peer Reviewed by: David Jimenez
 Comments:
 Put your comments here
