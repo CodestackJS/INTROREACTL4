@@ -1,10 +1,11 @@
 import { useCallback, useState } from "react";
 import Alert from "./components/Alert";
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
 import ListGroup from "./components/ListGroup/ListGroup";
 import MyuseStateExample from "./components/MyuseStateExample";
 import { BsCalendar2DateFill } from "react-icons/bs";
 import Counter from "./components/Counter/Counter";
+import Like from "./components/Like/Like";
 
 const App = () => {
   let items = ["New york", "San Francisco", "Tokyo", "London", "Paris"];
@@ -64,6 +65,15 @@ const App = () => {
   // return <div>Message</div>
   return (
     <>
+  {/* Like Icon Challenge */}
+    <Like>
+      
+
+
+    </Like>
+
+
+
       <div>
         {/* <Alert text="This text is coming from my text prop Alert"/> */}
         {/* this is the css for the icon */}
@@ -73,7 +83,6 @@ const App = () => {
 
         {turnOff ? null : (
           <Alert closingAlertButton={() => setTurnOff(true)}>
-            {" "}
             Test Alert Trial Button!
           </Alert>
         )}
@@ -102,6 +111,7 @@ const App = () => {
           Alert Button
         </Button>
 
+        {/* Jose Martinez  */}
         {person.firstName} {person.lastName}
         <Counter />
 
