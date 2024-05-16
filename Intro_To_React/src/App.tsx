@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import ListGroup from "./components/ListGroup/ListGroup";
 import MyuseStateExample from "./components/MyuseStateExample";
 import { BsCalendar2DateFill } from "react-icons/bs";
+import Counter from "./components/Counter/Counter";
 
 const App = () => {
   let items = ["New york", "San Francisco", "Tokyo", "London", "Paris"];
@@ -32,14 +33,33 @@ const App = () => {
   };
 
   const handleClick = () => {
-    console.log("Clicked from our helper function ");
+    //console.log("Clicked from our helper function ");
+    setAlertVisible(!alertVisible);
   };
 
+  const [turnOn, setTurnOn] = useState(false);
 
+  const [turnOff, setTurnOff] = useState(true);
+
+  //creating new one
+  // const [alertVisible, setAlertVisible] = useState(false)
+
+  const [alertVisible, setAlertVisible] = useState(false);
+  //const [firstName, setFirstName] = useState("Jose");
   
-const [turnOn, setTurnOn] = useState(false)
+  //const [lastName, setLastName] = useState("Martinez");
+  //const fullName = firstName + " " + lastName;
 
-const [turnOff, setTurnOff] = useState(true)
+  const [person, setPerson] = useState({
+    firstName: 'Jose',
+    lastName: 'Martinez'
+  })
+
+  const handleClick2 = () => {
+    setIsVisible(true);
+    console.log(isVisible);
+  };
+  const [isVisible, setIsVisible] = useState(false);
 
   // return <div>Message</div>
   return (
@@ -49,15 +69,27 @@ const [turnOff, setTurnOff] = useState(true)
         {/* this is the css for the icon */}
         <BsCalendar2DateFill color="red" size={180} />
 
-    {turnOff ? null : <Alert closingAlertButton = {() => setTurnOff(true)}> Test Alert Trial Button!</Alert> }
-        
-        
-        {turnOn?<Alert closingAlertButton = {() => setTurnOn(false)} >For the Alert Challenge Button...</Alert>:null }
+        {alertVisible ? <Alert>Passing in text as a child Alert!</Alert> : null}
 
+        {turnOff ? null : (
+          <Alert closingAlertButton={() => setTurnOff(true)}>
+            {" "}
+            Test Alert Trial Button!
+          </Alert>
+        )}
+
+        {turnOn ? (
+          <Alert closingAlertButton={() => setTurnOn(false)}>
+            For the Alert Challenge Button...
+          </Alert>
+        ) : null}
 
         <Button onClickFunction={handleClick}>One Button</Button>
-        <Button color="danger" onClickFunction={handleClick}>
-          Two Button
+
+        <Button onClickFunction={handleClick}>Last name Button</Button>
+
+        <Button color="danger" onClickFunction={handleClick2}>
+          Visible Button
         </Button>
 
         {/* Trial Alert Button Test */}
@@ -66,20 +98,25 @@ const [turnOff, setTurnOff] = useState(true)
         </Button>
 
         {/* Alert Button  */}
-        <Button color="success" onClickFunction={() =>setTurnOn(true)}>
+        <Button color="success" onClickFunction={() => setTurnOn(true)}>
           Alert Button
         </Button>
+
+        {person.firstName} {person.lastName}
+        <Counter />
 
         <ListGroup
           onSelectedItem={handleSelectItem}
           items={items}
           heading="Cities"
         />
+
         <ListGroup
           onSelectedItem={handleSelectItem}
           items={students}
           heading="Students"
         />
+
         <ListGroup
           onSelectedItem={handleSelectItem}
           items={cars}
