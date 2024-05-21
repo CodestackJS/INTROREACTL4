@@ -1,3 +1,27 @@
+Name: Jerie See
+Project: Mini Challenge 6 Like icon and button
+Date: 05/15/2024
+
+Requirements: Mini Challenge: Like Icon
+
+In our Same Project file: 
+Part 1: Create a simple React component called "Like"  component that when clicked it toggles fills in the icon on and off 
+
+Part 2: Create a Button.module.css and style the button to make it look as close to the primary bootstrap button 
+
+. Requirements:
+
+The component should be an icon.
+The Button.module.css should be in its own Button Folder and move your Button.tsx into that folder.
+
+Resources: GitHub: https://github.com/CodestackJS/INTROREACTL4
+
+Peer Reviewed by: ???
+Comments:
+
+
+________________________________________________________
+
 Name: Jerie See  <br>
 Project: Mini Challenge 5 Alert Component  <br>
 Date: 05/14/2024  <br>
